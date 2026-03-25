@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavYatra | Discover Places</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body data-page="places">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="Logo1.png" alt="NavYatra logo" />
+          <span>NavYatra</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="places" href="places.html">Places</a>
+          <a class="nav-link" data-nav="planner" href="planner.html">Trip Planner</a>
+          <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+          <a class="nav-link" data-nav="dashboard" href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section-head">
+          <div>
+            <h1 style="font-size: clamp(1.6rem, 3vw, 2.5rem);">Explore All Places Before Planning</h1>
+            <p id="location-label">Select what you want to visit from the complete image-backed list, then continue to planner.</p>
+          </div>
+          <button id="to-planner" class="btn btn-primary">Continue to Planner</button>
+        </div>
+
+        <article class="card search-panel">
+          <div class="search-grid">
+            <div>
+              <label for="search-input">Search place</label>
+              <input id="search-input" class="input" placeholder="Type place or keyword" />
+            </div>
+            <div>
+              <label for="state-filter">State</label>
+              <select id="state-filter" class="select">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Telangana">Telangana</option>
+              </select>
+            </div>
+            <div>
+              <label for="category-filter">Category</label>
+              <select id="category-filter" class="select">
+                <option value="all">All</option>
+                <option value="heritage">Heritage</option>
+                <option value="nature">Nature</option>
+                <option value="spiritual">Spiritual</option>
+                <option value="museum">Museum</option>
+                <option value="entertainment">Entertainment</option>
+              </select>
+            </div>
+            <div>
+              <label for="budget-filter">Entry fee max (INR)</label>
+              <input id="budget-filter" class="input" type="number" min="0" value="2000" />
+            </div>
+            <button id="reset-filters" type="button" class="btn btn-secondary">Reset</button>
+          </div>
+
+          <div class="filter-wrap" style="margin-top: 0.8rem;">
+            <div>
+              <label for="distance-filter">Distance max (km)</label>
+              <input id="distance-filter" class="input" type="number" min="1" value="5000" />
+            </div>
+            <div>
+              <label for="duration-filter">Visit duration max (min)</label>
+              <input id="duration-filter" class="input" type="number" min="30" value="240" />
+            </div>
+            <div>
+              <label for="time-filter">Preferred time slot</label>
+              <select id="time-filter" class="select">
+                <option value="all">Any</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </div>
+            <div>
+              <label for="sort-filter">Sort by</label>
+              <select id="sort-filter" class="select">
+                <option value="distance">Distance</option>
+                <option value="fee">Entry fee</option>
+                <option value="duration">Duration</option>
+              </select>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal">
+        <div id="selected-chips" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+        <div id="places-grid" class="place-grid" style="margin-top: 0.8rem;"></div>
+        <div id="empty-state" class="empty" style="display: none; margin-top: 1rem;">No places match your current filters.</div>
+        <div id="scroll-sentinel" style="height: 10px;"></div>
+      </section>
+    </main>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/placesData.inline.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/discovery.js"></script>
+  </body>
+</html>

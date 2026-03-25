@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavYatra | Final Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="Logo1.png" alt="NavYatra logo" />
+          <span>NavYatra</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="places" href="places.html">Places</a>
+          <a class="nav-link" data-nav="planner" href="planner.html">Trip Planner</a>
+          <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+          <a class="nav-link" data-nav="dashboard" href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section-head">
+          <div>
+            <h1 style="font-size: clamp(1.6rem, 3vw, 2.5rem);">Trip Dashboard</h1>
+            <p>Final snapshot of route, cost, time, and availability insights.</p>
+          </div>
+          <a href="places.html" class="btn btn-secondary">Plan Another Trip</a>
+        </div>
+
+        <div id="dashboard-kpis" class="grid three-col"></div>
+      </section>
+
+      <section class="section reveal grid two-col">
+        <article class="card card-pad">
+          <h3>Stops Overview</h3>
+          <div id="dashboard-stops" class="grid" style="margin-top: 0.8rem;"></div>
+          <div id="dashboard-empty" class="empty" style="display: none; margin-top: 0.8rem;">No generated itinerary available yet.</div>
+        </article>
+
+        <article class="card card-pad">
+          <h3>Smart Suggestions</h3>
+          <div id="dashboard-suggestions" class="grid" style="margin-top: 0.8rem;"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/dashboard.js"></script>
+  </body>
+</html>

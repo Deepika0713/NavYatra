@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavYatra | Trip Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body data-page="planner">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="Logo1.png" alt="NavYatra logo" />
+          <span>NavYatra</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="places" href="places.html">Places</a>
+          <a class="nav-link" data-nav="planner" href="planner.html">Trip Planner</a>
+          <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+          <a class="nav-link" data-nav="dashboard" href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section-head">
+          <div>
+            <h1 style="font-size: clamp(1.6rem, 3vw, 2.5rem);">Smart Trip Planner</h1>
+            <p>Set travel date, start time, and guide preference to generate your route.</p>
+          </div>
+        </div>
+
+        <div class="grid two-col">
+          <article class="card card-pad">
+            <h3>Planner Inputs</h3>
+            <form id="planner-form" class="grid two-col" style="margin-top: 0.8rem;">
+              <div>
+                <label for="trip-date">Travel date</label>
+                <input id="trip-date" class="input" type="date" required />
+              </div>
+              <div>
+                <label for="start-time">Start time</label>
+                <input id="start-time" class="input" type="time" value="09:00" required />
+              </div>
+              <div>
+                <label for="travel-mode">Primary travel type</label>
+                <select id="travel-mode" class="select">
+                  <option value="cab">Cab</option>
+                  <option value="rental">Rental</option>
+                  <option value="own">Own Vehicle</option>
+                  <option value="bus">Bus</option>
+                  <option value="walk">Walk + Local</option>
+                </select>
+              </div>
+              <div>
+                <label for="budget-limit">Budget cap (INR)</label>
+                <input id="budget-limit" class="input" type="number" min="0" value="5000" />
+              </div>
+              <div style="grid-column: 1 / -1; display: flex; align-items: center; gap: 0.6rem;">
+                <input id="need-guide" type="checkbox" checked />
+                <label for="need-guide" style="margin: 0;">Need guide support (if available at time slot)</label>
+              </div>
+              <button type="submit" class="btn btn-primary" style="grid-column: 1 / -1;">Generate Itinerary</button>
+            </form>
+          </article>
+
+          <article class="card card-pad">
+            <h3>Selected Places</h3>
+            <div id="planner-selected" class="grid" style="margin-top: 0.8rem;"></div>
+            <div id="planner-empty" class="empty" style="display: none; margin-top: 0.8rem;">No places selected yet. Go to places page and choose at least one destination.</div>
+            <div style="margin-top: 0.8rem; display: flex; gap: 0.6rem;">
+              <a href="places.html" class="btn btn-secondary">Back to Places</a>
+              <button id="clear-selection" type="button" class="btn btn-danger">Clear Selection</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/placesData.inline.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/planner.js"></script>
+  </body>
+</html>

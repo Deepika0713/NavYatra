@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavYatra | Discover and Plan India Trips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="Logo1.png" alt="NavYatra logo" />
+          <span>NavYatra</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="places" href="places.html">Places</a>
+          <a class="nav-link" data-nav="planner" href="planner.html">Trip Planner</a>
+          <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+          <a class="nav-link" data-nav="dashboard" href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero reveal">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-brand-row">
+              <img class="hero-logo" src="Logo.png" alt="NavYatra" />
+              <span class="hero-brand-text">NavYatra</span>
+            </div>
+            <p class="badge" style="background: rgba(255,255,255,0.16); color: #fff; width: fit-content;">Smart Route + Timing + Guide Booking</p>
+            <h1>Plan your India travel day like a local.</h1>
+            <p>
+              NavYatra helps you discover nearby must-visit attractions, skip closed places,
+              optimize route order, and generate a realistic hour-by-hour schedule with travel,
+              budget, and guide availability.
+            </p>
+            <div class="stepper" aria-label="Flow preview">
+              <span class="step active">1</span>
+              <span class="step">2</span>
+              <span class="step">3</span>
+              <span class="step">4</span>
+              <span class="step">5</span>
+            </div>
+          </div>
+          <div class="glass-panel card-pad">
+            <h3>Start from your location</h3>
+            <p class="muted">Search city/state and jump directly to personalized place discovery.</p>
+            <form id="home-location-form" class="grid two-col" style="margin-top: 0.7rem;">
+              <div>
+                <label for="home-state">State</label>
+                <select id="home-state" class="select" required>
+                  <option value="">Select state</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Telangana">Telangana</option>
+                </select>
+              </div>
+              <div>
+                <label for="home-city">City</label>
+                <input id="home-city" class="input" placeholder="Vijayawada / Jaipur / Kochi / Hyderabad" required />
+              </div>
+              <button class="btn btn-primary pulse-on-hover" type="submit" style="grid-column: 1 / -1;">Find Places</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section reveal">
+        <div class="section-head">
+          <div>
+            <h2>What NavYatra does</h2>
+            <p>From discovery to dashboard, designed for practical same-day trip execution.</p>
+          </div>
+        </div>
+        <div class="grid three-col">
+          <article class="card card-pad">
+            <h3>Location-Based Discovery</h3>
+            <p class="muted">Filter places by selected city/state with budget, time, distance, and category controls.</p>
+          </article>
+          <article class="card card-pad">
+            <h3>Smart Planner</h3>
+            <p class="muted">Auto-route selected places, skip closed spots, and detect schedule conflicts before you start.</p>
+          </article>
+          <article class="card card-pad">
+            <h3>Guide Availability</h3>
+            <p class="muted">Check if any guide is free at your visit slot and show name, experience, and fee instantly.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/home.js"></script>
+  </body>
+</html>

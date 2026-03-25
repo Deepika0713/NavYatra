@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavYatra | Itinerary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body data-page="itinerary">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="Logo1.png" alt="NavYatra logo" />
+          <span>NavYatra</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" data-nav="home" href="index.html">Home</a>
+          <a class="nav-link" data-nav="places" href="places.html">Places</a>
+          <a class="nav-link" data-nav="planner" href="planner.html">Trip Planner</a>
+          <a class="nav-link" data-nav="itinerary" href="itinerary.html">Itinerary</a>
+          <a class="nav-link" data-nav="dashboard" href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section-head">
+          <div>
+            <h1 style="font-size: clamp(1.6rem, 3vw, 2.5rem);">Generated Itinerary</h1>
+            <p>Hour-by-hour plan with travel mode suggestions and guide availability checks.</p>
+          </div>
+          <a href="dashboard.html" class="btn btn-primary">Open Final Dashboard</a>
+        </div>
+
+        <div class="grid three-col">
+          <article class="card card-pad kpi">
+            <span class="muted">Total Stops</span>
+            <strong id="kpi-stops">0</strong>
+          </article>
+          <article class="card card-pad kpi">
+            <span class="muted">Total Time</span>
+            <strong id="kpi-time">0h 0m</strong>
+          </article>
+          <article class="card card-pad kpi">
+            <span class="muted">Total Cost</span>
+            <strong id="kpi-cost">INR 0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal grid two-col">
+        <article class="card card-pad">
+          <h3>Timeline</h3>
+          <div id="warnings" class="grid" style="margin-top: 0.8rem;"></div>
+          <div id="timeline" class="timeline" style="margin-top: 0.8rem;"></div>
+          <div id="timeline-empty" class="empty" style="display: none; margin-top: 0.8rem;">No itinerary found. Create one from planner page.</div>
+        </article>
+
+        <article class="card card-pad">
+          <h3>Route & Transport</h3>
+          <div id="route-list" class="grid" style="margin-top: 0.8rem;"></div>
+          <iframe id="map-frame" class="map-frame" title="Route map"></iframe>
+        </article>
+      </section>
+    </main>
+
+    <script src="scripts/state.js"></script>
+    <script src="scripts/placesData.inline.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/itinerary.js"></script>
+  </body>
+</html>
