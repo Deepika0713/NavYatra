@@ -307,3 +307,105 @@
     gap: 0.35rem;
   }
 }
+.planner-location-card {
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(24, 32, 40, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.planner-location-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.planner-location-card > p {
+  line-height: 1.5;
+}
+
+.planner-location-card > button {
+  margin-top: 0.5rem;
+}
+
+.planner-location-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+.planner-location-divider::before,
+.planner-location-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(24, 32, 40, 0.12);
+}
+
+.planner-location-card label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.planner-location-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.planner-location-status {
+  margin: 0.7rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+/* Save Draft + Generate Itinerary buttons */
+.planner-submit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.planner-submit-actions .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.planner-submit-actions .planner-submit {
+  grid-column: auto;
+  width: auto;
+}
+
+.planner-submit-actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Save status */
+.planner-card [role="status"][aria-live="polite"] {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile layout */
+@media (max-width: 460px) {
+  .planner-submit-actions {
+    flex-direction: column;
+  }
+
+  .planner-submit-actions .btn {
+    width: 100%;
+  }
+}

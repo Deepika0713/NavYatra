@@ -1,29 +1,39 @@
+
+import { NavLink } from "react-router-dom";
+
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Places", href: "/places" },
-  { label: "Trip Planner", href: "/planner" },
-  { label: "Itinerary", href: "/itinerary" },
-  { label: "Dashboard", href: "/dashboard" },
+  { label: "Home", to: "/" },
+  { label: "Places", to: "/places" },
+  { label: "Trip Planner", to: "/planner" },
+  { label: "Itinerary", to: "/itinerary" },
+  { label: "Dashboard", to: "/dashboard" },
 ];
 
 export default function Navbar() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <a className="brand" href="/">
+        <NavLink to="/" className="brand">
           <img
-            className="brand-logo"
             src="/Logo1.png"
             alt="NavYatra logo"
+            className="brand-logo"
           />
           <span>NavYatra</span>
-        </a>
+        </NavLink>
 
-        <nav className="nav-links" aria-label="Main">
+        <nav className="nav-links" aria-label="Main navigation">
           {navItems.map((item) => (
-            <a className="nav-link" href={item.href} key={item.href}>
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) =>
+                `nav-link${isActive ? " active" : ""}`
+              }
+            >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
       </div>

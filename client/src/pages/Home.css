@@ -1,0 +1,1091 @@
+
+.navy-home {
+  --nh-ink: #18252b;
+  --nh-muted: #62717d;
+  --nh-teal: #0f8178;
+  --nh-teal-dark: #0a625c;
+  --nh-orange: #df6d2d;
+  --nh-border: rgba(24, 37, 43, 0.12);
+  --nh-cream: #fbf8f1;
+  color: var(--nh-ink);
+  padding-top: 1rem;
+}
+
+.nh-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: stretch;
+  gap: clamp(2rem, 5vw, 5rem);
+  overflow: hidden;
+  min-height: 430px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-radius: 34px;
+  color: #f8fbfc;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(30, 128, 119, 0.4), transparent 38%),
+    linear-gradient(135deg, #21343a 0%, #172228 76%, #20282d 100%);
+  box-shadow: 0 26px 55px rgba(24, 37, 43, 0.16);
+}
+
+.nh-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+}
+
+.nh-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.12rem;
+  font-weight: 750;
+}
+
+.nh-hero-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nh-pill {
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d8efeb;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+}
+
+.nh-hero h1 {
+  max-width: 680px;
+  margin: 0;
+  color: #f8fbfc;
+  font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+  font-weight: 750;
+  letter-spacing: -0.065em;
+  line-height: 1.04;
+  overflow-wrap: anywhere;
+}
+
+.nh-hero h1 span {
+  color: #67d4c2;
+}
+
+.nh-hero-description {
+  max-width: 580px;
+  margin: 1.25rem 0 1.5rem;
+  color: #d2dce0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.nh-hero-actions,
+.nh-trip-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nh-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.nh-button:hover {
+  transform: translateY(-2px);
+}
+
+.nh-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+.nh-button-primary {
+  color: #fff;
+  background: linear-gradient(105deg, #0d8177, #14a69b);
+  box-shadow: 0 10px 22px rgba(13, 129, 119, 0.2);
+}
+
+.nh-button-primary:hover {
+  background: linear-gradient(105deg, #0a6c64, #0e9187);
+}
+
+.nh-button-outline {
+  color: #f8fbfc;
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nh-button-light {
+  color: var(--nh-ink);
+  border-color: var(--nh-border);
+  background: #fff;
+}
+
+.nh-progress {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 2rem;
+}
+
+.nh-progress span {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  color: #a6c0c4;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.nh-progress .nh-progress-active {
+  color: #fff;
+  background: var(--nh-teal);
+}
+
+.nh-progress-label {
+  margin: 0.65rem 0 0;
+  color: #a9bec2;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+.nh-location-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  min-width: 0;
+  padding: clamp(1.3rem, 2.6vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 27px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.07)
+  );
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.nh-panel-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.nh-panel-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  color: #a7f1e5;
+  background: rgba(16, 166, 151, 0.2);
+  font-size: 1.5rem;
+}
+
+.nh-location-panel h2 {
+  margin: 0.1rem 0 0.55rem;
+  color: #fff;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  letter-spacing: -0.035em;
+}
+
+.nh-location-panel p {
+  margin: 0;
+  color: #d6e0e3;
+  line-height: 1.6;
+}
+
+.nh-location-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nh-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nh-field label {
+  color: #f5f8f8;
+  font-size: 0.87rem;
+  font-weight: 600;
+}
+
+.nh-field input,
+.nh-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  outline: none;
+  color: #17252b;
+  background: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.nh-field input:focus,
+.nh-field select:focus {
+  border-color: #61d6c6;
+  box-shadow: 0 0 0 3px rgba(97, 214, 198, 0.18);
+}
+
+.nh-find-button {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.nh-panel-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  color: #bcd1d4;
+  font-size: 0.8rem;
+}
+
+.nh-panel-footer span {
+  color: #74e2d0;
+}
+
+.nh-section {
+  margin-top: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.nh-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.35rem;
+}
+
+.nh-section-heading > div {
+  max-width: 720px;
+}
+
+.nh-eyebrow {
+  margin: 0 0 0.55rem;
+  color: var(--nh-teal);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.nh-section-heading h2 {
+  
+  margin: 0;
+  color: var(--nh-ink);
+  font-size: clamp(1.65rem, 3vw, 2.3rem);
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+}
+
+.nh-section-heading > div > p:last-child {
+  margin: 0.6rem 0 0;
+  
+  color: var(--nh-muted);
+  line-height: 1.65;
+}
+
+.nh-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.3rem 0;
+  border: 0;
+  color: var(--nh-teal-dark);
+  background: transparent;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nh-text-link:hover {
+  color: var(--nh-orange);
+}
+
+.nh-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.nh-feature-card {
+  position: relative;
+  min-height: 220px;
+  padding: 1.45rem;
+  border: 1px solid var(--nh-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 22px rgba(24, 37, 43, 0.035);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.nh-feature-card:hover,
+.nh-history-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15, 129, 120, 0.35);
+  box-shadow: 0 16px 30px rgba(24, 37, 43, 0.08);
+}
+
+.nh-feature-number {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  color: #a5b1b5;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.nh-feature-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  margin-bottom: 1.25rem;
+  border-radius: 14px;
+  color: var(--nh-teal-dark);
+  background: #dcefe9;
+  font-size: 1.35rem;
+}
+
+.nh-feature-card h3,
+.nh-trip-card h3,
+.nh-history-card h3,
+.nh-empty-card h3 {
+  margin: 0 0 0.55rem;
+  color: var(--nh-ink);
+  font-size: 1.08rem;
+  letter-spacing: -0.025em;
+}
+
+.nh-feature-card p,
+.nh-trip-card p,
+.nh-history-card p,
+.nh-empty-card p {
+  margin: 0;
+  color: var(--nh-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.nh-trip-card,
+.nh-empty-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--nh-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.nh-trip-card-main {
+  min-width: 0;
+}
+
+.nh-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.nh-status-draft {
+  color: #85501e;
+  background: #fff0d9;
+}
+
+.nh-status-saved {
+  color: #0b6c61;
+  background: #dff4ed;
+}
+
+.nh-trip-meta {
+  margin-top: 0.35rem !important;
+  font-size: 0.82rem !important;
+}
+
+.nh-trip-actions {
+  justify-content: flex-end;
+}
+
+.nh-danger-link {
+  padding: 0.5rem;
+  border: 0;
+  color: #a13d35;
+  background: transparent;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.nh-danger-link:hover {
+  text-decoration: underline;
+}
+
+.nh-empty-card {
+  flex-wrap: wrap;
+}
+
+.nh-empty-card > div {
+  flex: 1 1 240px;
+}
+
+.nh-empty-icon {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 15px;
+  color: var(--nh-teal-dark);
+  background: #dcefe9;
+  font-size: 1.4rem;
+}
+
+.nh-history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.nh-history-card {
+  min-width: 0;
+  padding: 1.4rem;
+  border: 1px solid var(--nh-border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.68);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.nh-history-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.nh-history-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 13px;
+  color: var(--nh-teal-dark);
+  background: #dcefe9;
+}
+
+.nh-history-card .nh-status {
+  margin: 0;
+}
+
+.nh-history-cost {
+  margin: 0.9rem 0 !important;
+  color: var(--nh-ink) !important;
+  font-weight: 700;
+}
+
+.nh-history-empty {
+  justify-content: flex-start;
+}
+
+.nh-account-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--nh-border);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.nh-account-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.nh-account-avatar {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--nh-teal);
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.nh-account-bar .nh-eyebrow {
+  margin-bottom: 0.2rem;
+}
+
+.nh-account-bar strong,
+.nh-account-bar > div > div > span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.nh-account-bar > div > div > span {
+  margin-top: 0.15rem;
+  color: var(--nh-muted);
+  font-size: 0.83rem;
+}
+
+.nh-logout-button {
+  flex-shrink: 0;
+  color: #8b3933;
+  border-color: rgba(161, 61, 53, 0.2);
+  background: #fff6f3;
+}
+
+.nh-logout-button:hover {
+  background: #ffe9e3;
+}
+
+.nh-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.7rem 0 0.8rem;
+  color: var(--nh-muted);
+  font-size: 0.82rem;
+}
+
+.nh-footer span {
+  color: var(--nh-ink);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.nh-footer p {
+  margin: 0;
+}
+
+.nh-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(15, 129, 120, 0.22);
+  border-radius: 12px;
+  color: var(--nh-teal-dark);
+  background: #e8f7f2;
+}
+
+.nh-notice button {
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .nh-hero {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .nh-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.7rem);
+  }
+
+  .nh-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nh-history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nh-trip-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nh-trip-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .navy-home {
+    padding-top: 0.5rem;
+  }
+
+  .nh-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.4rem;
+    border-radius: 24px;
+  }
+
+  .nh-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .nh-hero-description {
+    font-size: 0.94rem;
+  }
+
+  .nh-location-panel {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .nh-location-form {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+
+  .nh-find-button {
+    grid-column: auto;
+  }
+
+  .nh-section {
+    margin-top: 2.8rem;
+  }
+
+  .nh-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nh-feature-grid,
+  .nh-history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nh-feature-card {
+    min-height: auto;
+  }
+
+  .nh-trip-card,
+  .nh-empty-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nh-trip-actions {
+    align-items: stretch;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nh-trip-actions .nh-button {
+    width: 100%;
+  }
+
+  .nh-account-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nh-logout-button {
+    width: 100%;
+  }
+
+  .nh-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nh-button,
+  .nh-feature-card,
+  .nh-history-card {
+    transition: none;
+  }
+
+  .nh-button:hover,
+  .nh-feature-card:hover,
+  .nh-history-card:hover {
+    transform: none;
+  }
+}
+
+/* ===== Home page spacing and typography refinements ===== */
+
+/* Reduce the welcome heading size */
+.hero h1 {
+  font-size: clamp(2.4rem, 3.5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-top: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Keep the hero content balanced */
+.hero-grid {
+  align-items: stretch;
+  gap: 2rem;
+}
+
+/* Reduce excess space inside the location panel */
+.hero .glass-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1.75rem;
+  min-height: 0;
+}
+
+/* Keep the location heading and description close together */
+.hero .glass-panel h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.hero .glass-panel > p {
+  margin: 0 0 0.5rem;
+  line-height: 1.55;
+}
+
+/* Bring the State and City inputs closer to the heading */
+.hero .glass-panel form {
+  margin-top: 0.5rem;
+  gap: 1rem;
+  align-content: start;
+}
+
+/* Keep labels close to their respective inputs */
+.hero .glass-panel form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Consistent form controls */
+.hero .glass-panel form .input,
+.hero .glass-panel form .select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Make the home hero fit smaller screens */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .hero .glass-panel {
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero .glass-panel form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .glass-panel form button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================
+   NAVYATRA HOME — FINAL HERO LAYOUT FIX
+   Add this at the VERY END of Home.css
+========================================= */
+
+/* Keep the hero columns balanced */
+.navy-home .nh-hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+/* Reduce the large welcome heading */
+.navy-home .nh-hero-copy h1 {
+  font-size: clamp(2.4rem, 3.3vw, 3.15rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.045em !important;
+  margin: 1.1rem 0 1rem !important;
+  max-width: 620px !important;
+  overflow-wrap: anywhere;
+}
+
+/* Make the description more compact */
+.navy-home .nh-hero-description {
+  font-size: 0.98rem !important;
+  line-height: 1.65 !important;
+  max-width: 560px !important;
+  margin: 0 0 1.35rem !important;
+}
+
+/* Reduce unnecessary gaps in the left column */
+.navy-home .nh-brand-row {
+  margin-bottom: 1.1rem !important;
+}
+
+.navy-home .nh-pill {
+  margin: 0 0 1rem !important;
+  font-size: 0.78rem !important;
+}
+
+.navy-home .nh-hero-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.75rem !important;
+  margin-top: 1.1rem !important;
+}
+
+/* Bring the location panel content closer together */
+.navy-home .nh-location-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  padding: 1.75rem !important;
+  min-width: 0;
+}
+
+/* Keep the icon, heading and subtitle close together */
+.navy-home .nh-panel-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 0.85rem !important;
+  margin: 0 0 1.5rem !important;
+}
+
+.navy-home .nh-panel-top > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.navy-home .nh-panel-top h2 {
+  font-size: clamp(1.25rem, 1.7vw, 1.55rem) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 0.55rem !important;
+  text-align: left !important;
+}
+
+.navy-home .nh-panel-top p {
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+/* Move State and City fields closer to the panel heading */
+.navy-home .nh-location-form {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: end !important;
+  gap: 1rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navy-home .nh-field {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.4rem !important;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.navy-home .nh-field label {
+  font-size: 0.88rem !important;
+  margin: 0 !important;
+}
+
+.navy-home .nh-field input,
+.navy-home .nh-field select {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 3.15rem !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* Button spans both form columns */
+.navy-home .nh-find-button {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  margin: 0.15rem 0 0 !important;
+  min-height: 3.15rem !important;
+}
+
+/* Keep the panel footer compact */
+.navy-home .nh-panel-footer {
+  margin-top: 1.1rem !important;
+  font-size: 0.82rem !important;
+}
+
+/* Laptop and smaller screens */
+@media (max-width: 900px) {
+  .navy-home .nh-hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .navy-home .nh-hero-copy h1 {
+    font-size: clamp(2.25rem, 6vw, 3rem) !important;
+  }
+
+  .navy-home .nh-location-panel {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 520px) {
+  .navy-home .nh-hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem) !important;
+  }
+
+  .navy-home .nh-location-form {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .navy-home .nh-find-button {
+    grid-column: 1 !important;
+  }
+
+  .navy-home .nh-panel-top {
+    gap: 0.65rem !important;
+  }
+
+  .navy-home .nh-location-panel {
+    padding: 1.15rem !important;
+  }
+}
+
+/* Welcome name stays beside Welcome */
+.navy-home .nh-hero-copy .nh-welcome-title {
+  font-size: clamp(2rem, 3.1vw, 2.8rem) !important;
+  line-height: 1.12 !important;
+  text-align: left;
+  margin: 1rem 0 !important;
+}
+
+.navy-home .nh-hero-copy .nh-welcome-name {
+  display: inline !important;
+  white-space: nowrap;
+  color: #61d8c3;
+}
+
+/* Make the location panel fit its contents */
+.navy-home .nh-location-panel {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  align-self: center !important;
+  justify-content: flex-start !important;
+  padding: 1.5rem !important;
+  gap: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Remove unwanted fixed heights from panel children */
+.navy-home .nh-panel-top,
+.navy-home .nh-location-form,
+.navy-home .nh-panel-footer {
+  flex: 0 0 auto !important;
+}
+
+/* Keep the panel's content compact */
+.navy-home .nh-panel-top {
+  margin-bottom: 1.25rem !important;
+}
+
+.navy-home .nh-panel-footer {
+  margin-top: 1rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Keep the whole hero vertically compact */
+.navy-home .nh-hero {
+  align-items: center !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Prevent mobile overflow */
+@media (max-width: 520px) {
+  .navy-home .nh-hero-copy .nh-welcome-title {
+    font-size: clamp(1.7rem, 7vw, 2.25rem) !important;
+  }
+}
